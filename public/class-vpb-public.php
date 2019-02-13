@@ -135,17 +135,14 @@ class Vpb_Public {
 
 		$option_array = array(
 			'url' => $this->options['url'],
-			'id_albergo' => $this->options['id_albergo'],
-			'id_stile' => $this->options['id_stile'],
-			'dc' => $this->options['dc'],
+			'Albergo' => $this->options['albergo'],
+			'OidPortaleXAlbergo' => $this->options['oid_portale_x_albergo'],
 			'minNights' => $this->options['min_nights'],
 			'maxRooms' => $this->options['max_rooms'],
 			'maxPeople' => $this->options['max_people'],
 			'defaultAdults' => $this->options['default_adults'],
 			'minAdultsFirstRoom' => $this->options['min_adults_first_room'],
 			'minAdultsOtherRooms' => $this->options['min_adults_other_rooms'],
-			'minAgeChildren' => $this->options['min_age_children'],
-			'maxAgeChildren' => $this->options['max_age_children'],
 		);
 		wp_localize_script( $this->plugin_name, 'vpb_options', $option_array );
 

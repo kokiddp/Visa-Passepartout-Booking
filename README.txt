@@ -24,7 +24,7 @@ As simple as it gets:
 1. Upload the plugin
 2. Activate it
 3. Configure it by setting the 4 option fields under Settings -> Visa PassePartout Booking
-4. Place [vpb_display_form] shortcode wherever you want (do not use both on same page)
+4. Place [vpb_display_form] shortcode wherever you want
 
 == Frequently Asked Questions ==
 

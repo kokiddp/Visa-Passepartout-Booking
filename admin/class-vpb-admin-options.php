@@ -65,9 +65,8 @@ class Vpb_Admin_Options {
 		
 		add_settings_section( 'vpb_main', __('Main Settings', 'visa-passepartout-booking'), array( $this, 'vpb_main_section_text' ), 'vpb' );
 		add_settings_field( 'vpb_url', __('URL base', 'visa-passepartout-booking'), array( $this, 'vpb_setting_url'), 'vpb', 'vpb_main' );
-		add_settings_field( 'vpb_id_albergo', __('ID Albergo', 'visa-passepartout-booking'), array( $this, 'vpb_setting_id_albergo'), 'vpb', 'vpb_main' );
-		add_settings_field( 'vpb_id_stile', __('ID Stile', 'visa-passepartout-booking'), array( $this, 'vpb_setting_id_stile'), 'vpb', 'vpb_main' );
-		add_settings_field( 'vpb_dc', __('DC', 'visa-passepartout-booking'), array( $this, 'vpb_setting_dc'), 'vpb', 'vpb_main' );
+		add_settings_field( 'vpb_albergo', __('Albergo', 'visa-passepartout-booking'), array( $this, 'vpb_setting_albergo'), 'vpb', 'vpb_main' );
+		add_settings_field( 'vpb_oid_portale_x_albergo', __('OidPortaleXAlbergo', 'visa-passepartout-booking'), array( $this, 'vpb_setting_oid_portale_x_albergo'), 'vpb', 'vpb_main' );
 
 		add_settings_section( 'vpb_config', __('Configuration Settings', 'visa-passepartout-booking'), array( $this, 'vpb_config_section_text' ), 'vpb' );
 		add_settings_field( 'vpb_min_nights', __('Minimum nights stay', 'visa-passepartout-booking'), array( $this, 'vpb_setting_min_nights'), 'vpb', 'vpb_config' );
@@ -76,8 +75,6 @@ class Vpb_Admin_Options {
 		add_settings_field( 'vpb_default_adults', __('Default adults per room', 'visa-passepartout-booking'), array( $this, 'vpb_setting_default_adults'), 'vpb', 'vpb_config' );
 		add_settings_field( 'vpb_min_adults_first_room', __('Minimum adults in first room', 'visa-passepartout-booking'), array( $this, 'vpb_setting_min_adults_first_room'), 'vpb', 'vpb_config' );
 		add_settings_field( 'vpb_min_adults_other_rooms', __('Minimum adults in other rooms', 'visa-passepartout-booking'), array( $this, 'vpb_setting_min_adults_other_rooms'), 'vpb', 'vpb_config' );
-		add_settings_field( 'vpb_max_age_children', __('Maximum age for children', 'visa-passepartout-booking'), array( $this, 'vpb_setting_max_age_children'), 'vpb', 'vpb_config' );
-		add_settings_field( 'vpb_min_age_children', __('Minimum age for children', 'visa-passepartout-booking'), array( $this, 'vpb_setting_min_age_children'), 'vpb', 'vpb_config' );
 	}
 
 	/**
@@ -103,8 +100,8 @@ class Vpb_Admin_Options {
 	 *
 	 * @return void
 	 */
-	public function vpb_setting_id_albergo() {
-		echo "<input type='text' id='vpb_id_albergo' name='vpb_options[id_albergo]' value='{$this->options['id_albergo']}' />";
+	public function vpb_setting_albergo() {
+		echo "<input type='text' id='vpb_albergo' name='vpb_options[albergo]' value='{$this->options['albergo']}' />";
 	}
 
 	/**
@@ -112,18 +109,10 @@ class Vpb_Admin_Options {
 	 *
 	 * @return void
 	 */
-	public function vpb_setting_id_stile() {
-		echo "<input type='text' id='vpb_id_stile' name='vpb_options[id_stile]' value='{$this->options['id_stile']}' />";
+	public function vpb_setting_oid_portale_x_albergo() {
+		echo "<input type='text' id='vpb_oid_portale_x_albergo' name='vpb_options[oid_portale_x_albergo]' value='{$this->options['oid_portale_x_albergo']}' />";
 	}
 
-	/**
-	 * Undocumented function
-	 *
-	 * @return void
-	 */
-	public function vpb_setting_dc() {
-		echo "<input type='text' id='vpb_dc' name='vpb_options[dc]' value='{$this->options['dc']}' />";
-	}
 
 	/**
 	 * Undocumented function
@@ -188,23 +177,6 @@ class Vpb_Admin_Options {
 		echo "<input type='number' step='1' min='1' id='vpb_min_adults_other_rooms' name='vpb_options[min_adults_other_rooms]' value='{$this->options['min_adults_other_rooms']}' />";
 	}
 
-	/**
-	 * Undocumented function
-	 *
-	 * @return void
-	 */
-	public function vpb_setting_max_age_children() {
-		echo "<input type='number' step='1' min='1' max='17' id='vpb_max_age_children' name='vpb_options[max_age_children]' value='{$this->options['max_age_children']}' />";
-	}
-
-	/**
-	 * Undocumented function
-	 *
-	 * @return void
-	 */
-	public function vpb_setting_min_age_children() {
-		echo "<input type='number' step='1' min='0' max='16' id='vpb_min_age_children' name='vpb_options[min_age_children]' value='{$this->options['min_age_children']}' />";
-	}
 
 	/**
 	 * Undocumented function

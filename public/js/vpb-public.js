@@ -58257,8 +58257,6 @@ var _ = require('lodash');
                 defaultAdults: parseInt(vpb_options.defaultAdults),
                 minAdultsFirstRoom: parseInt(vpb_options.minAdultsFirstRoom),
                 minAdultsOtherRooms: parseInt(vpb_options.minAdultsOtherRooms),
-                minAgeChildren: parseInt(vpb_options.minAgeChildren),
-                maxAgeChildren: parseInt(vpb_options.maxAgeChildren),
                 minArrivalDate: moment(new Date()).startOf('day').toDate(),
                 url: vpb_options.url,
                 queryString: '',
@@ -58283,9 +58281,8 @@ var _ = require('lodash');
             }
 
             $scope.submit = {
-                id_albergo: vpb_options.id_albergo,
-                id_stile: vpb_options.id_stile,
-                dc: vpb_options.dc,
+                Albergo: vpb_options.Albergo,
+                OidPortaleXAlbergo: vpb_options.OidPortaleXAlbergo,
                 tot_adulti: 0,
                 tot_bambini: 0,
                 notti_1: 1,
