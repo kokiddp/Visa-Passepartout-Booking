@@ -147,6 +147,24 @@
     appearance: none;
 }
 
+#vpb .vpb_coupon
+{
+    clear: both;
+    width: 50%;
+    margin-bottom: 40px;
+}
+#vpb .vpb_coupon input[type=text]
+{
+    font-size: 18px;
+    line-height: 30px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #666;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
 #vpb .vpb_submit
 {
     margin-bottom: 30px;
@@ -198,5 +216,9 @@
         width: -webkit-calc((100% / 2) - 5px);
         width: -moz-calc((100% / 2) - 5px);
         width: calc((100% / 2) - 5px);
+    }
+    #vpb .vpb_coupon
+    {
+        width: 100%;
     }
 }

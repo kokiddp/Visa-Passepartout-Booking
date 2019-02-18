@@ -74,6 +74,8 @@ class Vpb_Public_Shortcodes {
 					<div class="vpb_date vpb_date_arrival clearfix">
 						<label><?= __( 'Arrival date', 'visa-passepartout-booking' ) ?></label>
 						<input name="arrivalDate" type="date" ng-model="form.arrivalDate" ng-min="{{internal.minArrivalDate}}" min="{{internal.minArrivalDate | date:'yyyy-MM-dd'}}" required>
+						<label><?= __( 'Flexible dates?', 'visa-passepartout-booking' ) ?></label>
+						<input name="IsDateFlessibili" type="checkbox" ng-model="submit.IsDateFlessibili">
 						<label class="validation-error" ng-if="vpbForm.arrivalDate.$invalid"><?= __( 'Invalid date!', 'visa-passepartout-booking' ) ?></label>
 					</div>
 					<div class="vpb_date vpb_date_depart clearfix">
@@ -104,6 +106,11 @@ class Vpb_Public_Shortcodes {
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<div class="vpb_coupon clearfix">
+					<label><?= __( 'Coupon', 'visa-passepartout-booking' ) ?></label>
+					<input type="text" name="coupon" ng-model="submit.CodicePromozione" />
 				</div>
 
 				<div class="vpb_submit clearfix">

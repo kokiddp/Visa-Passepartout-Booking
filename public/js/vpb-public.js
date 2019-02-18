@@ -58284,7 +58284,6 @@ var _ = require('lodash');
                 OidPortaleXAlbergo: vpb_options.OidPortaleXAlbergo,
                 Lingua: 0,
                 IsDateFlessibili: false,
-                CodicePromozione: '',
             }
 
             $scope.$watch("form.rooms", function(){
