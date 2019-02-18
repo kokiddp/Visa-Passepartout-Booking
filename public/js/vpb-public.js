@@ -58282,8 +58282,6 @@ var _ = require('lodash');
             $scope.submit = {
                 Albergo: vpb_options.Albergo,
                 OidPortaleXAlbergo: vpb_options.OidPortaleXAlbergo,
-                Notti: 1,
-                Camere: 1,
                 Lingua: 0,
                 IsDateFlessibili: false,
                 CodicePromozione: '',
@@ -58291,26 +58289,17 @@ var _ = require('lodash');
 
             $scope.$watch("form.rooms", function(){
                 $scope.submit.Camere = $scope.form.rooms.length;
-                _.forEach($scope.form.rooms, function(value){
-                    _.set($scope.submit, 'PersoneXCamera%5B' + value.id + '%5D%2EIndice', value.id);
-                    _.set($scope.submit, 'PersoneXCamera%5B' + value.id + '%5D%2EAdulti', value.adulti);
-                    _.set($scope.submit, 'PersoneXCamera%5B' + value.id + '%5D%2EQuantitaRiduzioni', value.bambini);
-                });
             }, true);
 
             $scope.$watch("form.arrivalDate", function(){
                 $scope.internal.arrival = moment($scope.form.arrivalDate).startOf('day');
                 $scope.internal.depart = moment($scope.form.departDate).startOf('day');
                 $scope.internal.minDepartDate = moment($scope.internal.arrival.toDate()).add(parseInt($scope.internal.minNights), 'd').toDate();
-                $scope.submit.Arrivo = $scope.internal.arrival.format('D/M/YYYY');
-                $scope.submit.Notti = $scope.internal.depart.diff($scope.internal.arrival, 'days');
             }, true);
 
             $scope.$watch("form.departDate", function(){
                 $scope.internal.arrival = moment($scope.form.arrivalDate).startOf('day');
                 $scope.internal.depart = moment($scope.form.departDate).startOf('day');
-                $scope.submit.Partenza = $scope.internal.depart.format('D/M/YYYY');
-                $scope.submit.Notti = $scope.internal.depart.diff($scope.internal.arrival, 'days');
             }, true);
 
             $scope.addRoom = function(){
@@ -58330,6 +58319,14 @@ var _ = require('lodash');
             }
 
             $scope.submitForm = function(){
+                $scope.submit.Arrivo = $scope.internal.arrival.format('DD/MM/YYYY');
+                $scope.submit.Partenza = $scope.internal.depart.format('DD/MM/YYYY');
+                $scope.submit.Notti = $scope.internal.depart.diff($scope.internal.arrival, 'days');
+                _.forEach($scope.form.rooms, function(value){
+                    _.set($scope.submit, 'PersoneXCamera%5B' + value.id + '%5D%2EIndice', value.id);
+                    _.set($scope.submit, 'PersoneXCamera%5B' + value.id + '%5D%2EAdulti', value.adulti);
+                    _.set($scope.submit, 'PersoneXCamera%5B' + value.id + '%5D%2EQuantitaRiduzioni', value.bambini);
+                });
                 $scope.internal.queryString = _.reduce($scope.submit, function(result, value, key) { return (!_.isNull(value) && !_.isUndefined(value)) ? (result += key + '=' + value + '&') : result; }, '').slice(0, -1);
                 $window.open($scope.internal.url+'?'+$scope.internal.queryString);
             }
