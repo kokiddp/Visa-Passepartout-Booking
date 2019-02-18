@@ -1,23 +1,23 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: Visa PassePartout Booking\n"
-"POT-Creation-Date: 2019-02-18 12:39+0100\n"
-"PO-Revision-Date: 2019-02-18 12:43+0100\n"
+"POT-Creation-Date: 2019-02-18 13:15+0100\n"
+"PO-Revision-Date: 2019-02-18 13:15+0100\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.7\n"
 "X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: vpb.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: it_IT\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -78,48 +78,56 @@ msgstr "Queste sono le impostazioni generali"
 msgid "Theese are the configuration settings"
 msgstr "Queste sono le opzioni di configurazione"
 
-#: public/class-vpb-public-shortcodes.php:76
+#: public/class-vpb-public-shortcodes.php:75
 msgid "Arrival date"
 msgstr "Data di arrivo"
 
-#: public/class-vpb-public-shortcodes.php:78
-#: public/class-vpb-public-shortcodes.php:83
+#: public/class-vpb-public-shortcodes.php:77
+msgid "Flexible dates?"
+msgstr "Date flessibili?"
+
+#: public/class-vpb-public-shortcodes.php:79
+#: public/class-vpb-public-shortcodes.php:84
 msgid "Invalid date!"
 msgstr "Data non valida!"
 
-#: public/class-vpb-public-shortcodes.php:81
+#: public/class-vpb-public-shortcodes.php:82
 msgid "Departure date"
 msgstr "Data di partenza"
 
-#: public/class-vpb-public-shortcodes.php:88
+#: public/class-vpb-public-shortcodes.php:89
 msgid "Rooms"
 msgstr "Camere"
 
-#: public/class-vpb-public-shortcodes.php:89
+#: public/class-vpb-public-shortcodes.php:90
 msgid "-"
 msgstr "-"
 
-#: public/class-vpb-public-shortcodes.php:91
+#: public/class-vpb-public-shortcodes.php:92
 msgid "+"
 msgstr "+"
 
-#: public/class-vpb-public-shortcodes.php:97
+#: public/class-vpb-public-shortcodes.php:98
 msgid "Room "
 msgstr "Camera "
 
-#: public/class-vpb-public-shortcodes.php:99
+#: public/class-vpb-public-shortcodes.php:100
 msgid "Adults"
 msgstr "Adulti"
 
-#: public/class-vpb-public-shortcodes.php:103
+#: public/class-vpb-public-shortcodes.php:104
 msgid "Children"
 msgstr "Bimbi"
 
-#: public/class-vpb-public-shortcodes.php:111
+#: public/class-vpb-public-shortcodes.php:112
+msgid "Coupon"
+msgstr "Coupon"
+
+#: public/class-vpb-public-shortcodes.php:117
 msgid "Submit"
 msgstr "Invia"
 
-#: public/class-vpb-public-shortcodes.php:112
+#: public/class-vpb-public-shortcodes.php:118
 msgid ""
 "There are one or more errors in your request. Please correct them before "
 "submitting."

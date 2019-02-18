@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Visa PassePartout Booking\n"
-"POT-Creation-Date: 2019-02-18 12:39+0100\n"
-"PO-Revision-Date: 2019-02-18 12:38+0100\n"
+"POT-Creation-Date: 2019-02-18 13:17+0100\n"
+"PO-Revision-Date: 2019-02-18 13:16+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -78,48 +78,56 @@ msgstr ""
 msgid "Theese are the configuration settings"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:76
+#: public/class-vpb-public-shortcodes.php:75
 msgid "Arrival date"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:78
-#: public/class-vpb-public-shortcodes.php:83
+#: public/class-vpb-public-shortcodes.php:77
+msgid "Flexible dates?"
+msgstr ""
+
+#: public/class-vpb-public-shortcodes.php:79
+#: public/class-vpb-public-shortcodes.php:84
 msgid "Invalid date!"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:81
+#: public/class-vpb-public-shortcodes.php:82
 msgid "Departure date"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:88
+#: public/class-vpb-public-shortcodes.php:89
 msgid "Rooms"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:89
+#: public/class-vpb-public-shortcodes.php:90
 msgid "-"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:91
+#: public/class-vpb-public-shortcodes.php:92
 msgid "+"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:97
+#: public/class-vpb-public-shortcodes.php:98
 msgid "Room "
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:99
+#: public/class-vpb-public-shortcodes.php:100
 msgid "Adults"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:103
+#: public/class-vpb-public-shortcodes.php:104
 msgid "Children"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:111
+#: public/class-vpb-public-shortcodes.php:112
+msgid "Coupon"
+msgstr ""
+
+#: public/class-vpb-public-shortcodes.php:117
 msgid "Submit"
 msgstr ""
 
-#: public/class-vpb-public-shortcodes.php:112
+#: public/class-vpb-public-shortcodes.php:118
 msgid ""
 "There are one or more errors in your request. Please correct them before "
 "submitting."
