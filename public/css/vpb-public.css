@@ -146,38 +146,6 @@
     -moz-appearance: none;
     appearance: none;
 }
-#vpb .vpb_rooms .vpb_room .ages
-{
-    display: inline-block;
-    width: -webkit-calc(-webkit-calc(-webkit-calc(100% / 3) * 2) - 5px);
-    width: -moz-calc(-moz-calc(-moz-calc(100% / 3) * 2) - 5px);
-    width: calc(calc(calc(100% / 3) * 2) - 5px);
-    width: -webkit-calc(((100% / 3) * 2) - 5px);
-    width: -moz-calc(((100% / 3) * 2) - 5px);
-    width: calc(((100% / 3) * 2) - 5px);
-}
-#vpb .vpb_rooms .vpb_room .age
-{
-    display: inline-block;
-    width: -webkit-calc(100% / 4);
-    width: -moz-calc(100% / 4);
-    width: calc(100% / 4);
-}
-#vpb .vpb_rooms .vpb_room .ages .age select
-{
-    font-size: 18px;
-    line-height: 30px;
-    width: 3em;
-    padding: 8px;
-    border: 1px solid #666;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin-bottom: 10px;
-}
 
 #vpb .vpb_submit
 {
@@ -216,14 +184,12 @@
         margin-right: 0;
     }
     #vpb .vpb_rooms_controls,
-    #vpb .vpb_rooms .vpb_room .people,    
-    #vpb .vpb_rooms .vpb_room .ages
+    #vpb .vpb_rooms .vpb_room .people
     {
         width: 100%;
     }
     #vpb .vpb_rooms .vpb_room .people .adults,
-    #vpb .vpb_rooms .vpb_room .people .children,
-    #vpb .vpb_rooms .vpb_room .age
+    #vpb .vpb_rooms .vpb_room .people .children
     {
         display: inline-block;
         width: -webkit-calc(-webkit-calc(100% / 2) - 5px);
@@ -232,188 +198,5 @@
         width: -webkit-calc((100% / 2) - 5px);
         width: -moz-calc((100% / 2) - 5px);
         width: calc((100% / 2) - 5px);
-    }
-}
-
-#vpb.miniform label
-{
-    float: left;
-    font-size: 14px;
-    line-height: 35px;
-    margin-right: 10px;
-}
-#vpb.miniform label.validation-error{
-    float: none;
-}
-#vpb.miniform .vpb_dates
-{
-    width: -webkit-calc(((100% - 40px) / 5) * 3);
-    width: -moz-calc(((100% - 40px) / 5) * 3);
-    width: -webkit-calc(-webkit-calc(-webkit-calc(100% - 40px) / 5) * 3);
-    width: -moz-calc(-moz-calc(-moz-calc(100% - 40px) / 5) * 3);
-    width: calc(calc(calc(100% - 40px) / 5) * 3);
-    width: calc(((100% - 40px) / 5) * 3);
-    margin-bottom: 0;
-    margin-right: 20px;
-}
-#vpb.miniform .vpb_dates .vpb_date
-{
-    float: left;
-    width: -webkit-calc(50% - 20px);
-    width: -moz-calc(50% - 20px);
-    width: calc(50% - 20px);
-}
-#vpb.miniform .vpb_dates .vpb_date input[type=date]
-{
-    font-size: 14px;
-    line-height: 14px;
-    padding: 6px;
-    width: -webkit-calc(50% - 10px);
-    width: -moz-calc(50% - 10px);
-    width: calc(50% - 10px);
-}
-
-#vpb.miniform .vpb_rooms_controls
-{
-    width: -webkit-calc(-webkit-calc(100% - 40px) / 5);
-    width: -moz-calc(-moz-calc(100% - 40px) / 5);
-    width: calc(calc(100% - 40px) / 5);
-    width: -webkit-calc((100% - 40px) / 5);
-    width: -moz-calc((100% - 40px) / 5);
-    width: calc((100% - 40px) / 5);
-    margin-bottom: 0;
-    margin-right: 20px;
-}
-#vpb.miniform .vpb_rooms_controls input[type=number]
-{
-    font-size: 14px;
-    line-height: 14px;
-    width: 3em;
-    padding: 8px;
-    margin-right: 0;
-}
-#vpb.miniform .vpb_rooms_controls input[type=button]
-{
-    font-size: 14px;
-    line-height: 14px;
-    padding: 10px 1em!important;
-    margin-right: 0;
-}
-
-#vpb.miniform .vpb_submit
-{
-    clear: none;
-    float:left;
-    width: -webkit-calc(-webkit-calc(100% - 40px) / 5);
-    width: -moz-calc(-moz-calc(100% - 40px) / 5);
-    width: calc(calc(100% - 40px) / 5);
-    width: -webkit-calc((100% - 40px) / 5);
-    width: -moz-calc((100% - 40px) / 5);
-    width: calc((100% - 40px) / 5);
-    margin-bottom: 0;
-    margin-right: 0;
-}
-#vpb.miniform .vpb_submit input[type=submit]
-{
-    font-size: 14px;
-    line-height: 14px;
-    padding: 10px 1em!important;
-}
-
-@media (max-width:1280px) and (min-width: 981px)
-{
-    #vpb.miniform .vpb_dates
-    {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    #vpb.miniform .vpb_rooms_controls,
-    #vpb.miniform .vpb_submit
-    {
-        width: -webkit-calc(50% - 20px);
-        width: -moz-calc(50% - 20px);
-        width: calc(50% - 20px);
-        margin-right: 20px;
-    }
-    #vpb.miniform .vpb_submit
-    {
-        margin-right: 0;
-    }
-}
-@media (max-width:980px) and (min-width: 481px)
-{
-    #vpb.miniform .vpb_dates
-    {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-    #vpb.miniform .vpb_rooms_controls,
-    #vpb.miniform .vpb_submit
-    {
-        width: -webkit-calc(50% - 20px);
-        width: -moz-calc(50% - 20px);
-        width: calc(50% - 20px);
-        margin-right: 20px;
-    }
-    #vpb.miniform label
-    {
-        float: none;
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-    #vpb.miniform .vpb_dates .vpb_date
-    {
-        width: 100%;
-    }
-    #vpb.miniform .vpb_dates .vpb_date input[type=date]
-    {
-        width: 100%;
-    }
-    #vpb.miniform .vpb_submit
-    {
-        margin-top: 40px;
-    }
-}
-@media (max-width:480px)
-{
-    #vpb.miniform .vpb_dates
-    {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-    #vpb.miniform .vpb_rooms_controls
-    {
-        width: -webkit-calc(70% - 20px);
-        width: -moz-calc(70% - 20px);
-        width: calc(70% - 20px);
-        margin-right: 20px;
-    }
-    #vpb.miniform .vpb_submit
-    {
-        width: -webkit-calc(30% - 20px);
-        width: -moz-calc(30% - 20px);
-        width: calc(30% - 20px);
-        margin-right: 0;
-    }
-    #vpb.miniform label
-    {
-        float: none;
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-    #vpb.miniform .vpb_dates .vpb_date
-    {
-        width: 100%;
-    }
-    #vpb.miniform .vpb_dates .vpb_date input[type=date]
-    {
-        width: 100%;
-    }
-    #vpb.miniform .vpb_submit
-    {
-        margin-top: 40px;
     }
 }

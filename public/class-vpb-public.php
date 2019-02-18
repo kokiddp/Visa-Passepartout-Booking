@@ -86,18 +86,6 @@ class Vpb_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Vpb_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Vpb_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		if ( $this->environment == 'production' ) {
 			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/vpb-public.min.css', array(), $this->version, 'all' );
 		}
@@ -113,18 +101,6 @@ class Vpb_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Vpb_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Vpb_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
 
 		if ( $this->environment == 'production' ) {
 			wp_register_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/vpb-public.min.js', array( 'jquery' ), $this->version, false );

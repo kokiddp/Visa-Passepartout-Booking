@@ -173,11 +173,8 @@ class Vpb {
 
 		$plugin_admin = new Vpb_Admin( $this->get_plugin_name(), $this->get_version(), $this->get_environment() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
 		$options = new Vpb_Admin_Options();
-
+		
 		$this->loader->add_action( 'admin_menu', $options, 'vpb_add_options_page' );
 		$this->loader->add_action( 'admin_init', $options, 'vpb_init_options' );
 

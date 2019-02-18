@@ -45,7 +45,6 @@ class Vpb_Public_Shortcodes {
 	public function add_shortocdes() {
 
 		add_shortcode( 'vpb_display_form', array( $this, 'vpb_display_form' ) );
-		add_shortcode( 'vpb_display_mini_form', array( $this, 'vpb_display_mini_form' ) );
 
 	}
 
