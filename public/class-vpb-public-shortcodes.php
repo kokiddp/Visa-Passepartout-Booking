@@ -94,7 +94,7 @@ class Vpb_Public_Shortcodes {
 				<div class="vpb_rooms clearfix">
 					<div ng-repeat="x in form.rooms" class="vpb_room clearfix">
 						<div class="people clearfix">
-							<label><?= __( 'Room ', 'visa-passepartout-booking' ) ?>{{x.id}}</label>
+							<label><?= __( 'Room ', 'visa-passepartout-booking' ) ?>{{(x.id) + 1}}</label>
 							<div class="adults clearfix">
 								<label><?= __( 'Adults', 'visa-passepartout-booking' ) ?></label>
 								<select ng-model="x.adulti" ng-options="n for n in [] | range:x.minAdulti:(x.maxAdulti - x.bambini)"></select>
