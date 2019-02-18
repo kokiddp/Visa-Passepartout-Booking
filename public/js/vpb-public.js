@@ -58269,7 +58269,7 @@ var _ = require('lodash');
                 arrivalDate: moment(new Date()).startOf('day').toDate(),
                 departDate: moment(new Date()).startOf('day').add(parseInt($scope.internal.minNights), 'd').toDate(),
                 rooms: [{
-                    id: 1,
+                    id: 0,
                     adulti: parseInt(vpb_options.defaultAdults),
                     bambini: 0,
                     minAdulti: parseInt(vpb_options.minAdultsFirstRoom),
@@ -58277,34 +58277,24 @@ var _ = require('lodash');
                     minBambini: 0,
                     maxBambini: parseInt(vpb_options.maxPeople),
                 }],
-                ages: [],
             }
 
             $scope.submit = {
                 Albergo: vpb_options.Albergo,
                 OidPortaleXAlbergo: vpb_options.OidPortaleXAlbergo,
-                tot_adulti: 0,
-                tot_bambini: 0,
-                notti_1: 1,
-                tot_camere: 1,
-                lingua_int: 'ita',
+                Notti: 1,
+                Camere: 1,
+                Lingua: 0,
+                IsDateFlessibili: false,
+                CodicePromozione: '',
             }
 
             $scope.$watch("form.rooms", function(){
-                $scope.submit.tot_camere = $scope.form.rooms.length;
-                $scope.submit.tot_adulti = _.sumBy($scope.form.rooms, function(r) { return r.adulti; });
-                $scope.submit.tot_bambini = _.sumBy($scope.form.rooms, function(r) { return r.bambini; });
+                $scope.submit.Camere = $scope.form.rooms.length;
                 _.forEach($scope.form.rooms, function(value){
-                    _.set($scope.submit, 'adulti' + value.id, value.adulti);
-                    _.set($scope.submit, 'bambini' + value.id, value.bambini);
-                });
-            }, true);
-
-            $scope.$watch("form.ages", function(){
-                _.forEach($scope.form.ages, function(value, key){
-                    _.forEach(value, function(value2, key2){
-                        _.set($scope.submit, 'st' + key + 'bamb' + key2, value2);
-                    });
+                    _.set($scope.submit, 'PersoneXCamera%5B' + value.id + '%5D%2EIndice', value.id);
+                    _.set($scope.submit, 'PersoneXCamera%5B' + value.id + '%5D%2EAdulti', value.adulti);
+                    _.set($scope.submit, 'PersoneXCamera%5B' + value.id + '%5D%2EQuantitaRiduzioni', value.bambini);
                 });
             }, true);
 
@@ -58312,19 +58302,15 @@ var _ = require('lodash');
                 $scope.internal.arrival = moment($scope.form.arrivalDate).startOf('day');
                 $scope.internal.depart = moment($scope.form.departDate).startOf('day');
                 $scope.internal.minDepartDate = moment($scope.internal.arrival.toDate()).add(parseInt($scope.internal.minNights), 'd').toDate();
-                $scope.submit.gg = $scope.internal.arrival.format('D');
-                $scope.submit.mm = $scope.internal.arrival.format('M');
-                $scope.submit.aa = $scope.internal.arrival.format('YYYY');
-                $scope.submit.notti_1 = $scope.internal.depart.diff($scope.internal.arrival, 'days');
+                $scope.submit.Arrivo = $scope.internal.arrival.format('D/M/YYYY');
+                $scope.submit.Notti = $scope.internal.depart.diff($scope.internal.arrival, 'days');
             }, true);
 
             $scope.$watch("form.departDate", function(){
                 $scope.internal.arrival = moment($scope.form.arrivalDate).startOf('day');
                 $scope.internal.depart = moment($scope.form.departDate).startOf('day');
-                $scope.submit.ggf = $scope.internal.depart.format('D');
-                $scope.submit.mmf = $scope.internal.depart.format('M');
-                $scope.submit.aaf = $scope.internal.depart.format('YYYY');
-                $scope.submit.notti_1 = $scope.internal.depart.diff($scope.internal.arrival, 'days');
+                $scope.submit.Partenza = $scope.internal.depart.format('D/M/YYYY');
+                $scope.submit.Notti = $scope.internal.depart.diff($scope.internal.arrival, 'days');
             }, true);
 
             $scope.addRoom = function(){
